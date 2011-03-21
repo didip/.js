@@ -1,7 +1,7 @@
 $(document).ready(function() {
   // user comment
   if(document.location.href.match(/\/r\/\w+\/comments\//i)) {
-    $(".link .usertext .md").css({
+    $(".link .usertext .md, .usertext-body .md").css({
       'padding': '0px',
       'margin-top': '6px',
       'background-color': '#fff',
@@ -13,6 +13,11 @@ $(document).ready(function() {
       'border-radius': 'none',
     });
 
+    $(".comment .child").css({
+      'border-left': '1px dotted #ddf',
+      'margin-left': '7px'
+    });
+
     // Sidebar work
     $(".side .spacer:first").remove();
   }
@@ -20,6 +25,10 @@ $(document).ready(function() {
   // header work
   $("#sr-header-area .flat-list.sr-bar.hover:first").remove();
   $("#sr-header-area .separator:first").remove();
+
+  $("#header-bottom-left img").css({
+    'margin-bottom': '-2px'
+  });
 
   // header-right work
   $("#header-bottom-right").css({
@@ -45,7 +54,8 @@ $(document).ready(function() {
   $(".side .spacer:first").remove();
 
   $(".side").css({
-    'margin': '7px 5px 0 10px'
+    'margin': '7px 5px 10px 10px',
+    'border': 'none !important'
   });
   $(".side .spacer").css({
     'margin': '0 0 12px 0'
@@ -65,6 +75,8 @@ $(document).ready(function() {
   $(".side .spacer .morelink:hover a").css({
     'color': '#169'
   });
+
+  $(".side .spacer .sidecontentbox").parent().remove();
 
   // tab work
   $(".tabmenu li:last").remove();
@@ -129,8 +141,8 @@ $(document).ready(function() {
   new_footer += '<li><a href="http://www.reddit.com/promoted/">self serve ads</a></li>';
   new_footer += '<li><a href="http://www.reddit.com/ad_inq/">inquire ads</a></li>';
   new_footer += '<li><a href="http://www.reddit.com/bookmarklets/">bookmarklets</a></li>';
-  new_footer += '<li><a href="http://www.reddit.com/code/">reddit code</a></li>';
   new_footer += '<li><a href="http://www.reddit.com/socialite/">socialite</a></li>';
+  new_footer += '<li><a href="http://www.reddit.com/code/">reddit code</a></li>';
   new_footer += '</ul>';
 
   $(".footer-parent .footer").removeClass('rounded');
