@@ -49,10 +49,6 @@ $(document).ready(function() {
   $("#header-bottom-right .separator").remove();
 
   // Sidebar work
-  $(".side .spacer:first").remove();
-  $(".side .spacer:first").remove();
-  $(".side .spacer:first").remove();
-
   $(".side").css({
     'margin': '7px 5px 10px 10px',
     'border': 'none !important'
