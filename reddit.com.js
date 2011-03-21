@@ -1,4 +1,22 @@
 $(document).ready(function() {
+  // user comment
+  if(document.location.href.match(/\/r\/\w+\/comments\//i)) {
+    $(".link .usertext .md").css({
+      'padding': '0px',
+      'margin-top': '6px',
+      'background-color': '#fff',
+      'line-height': '1.6',
+      'font-size': '14px',
+      'border': 'none',
+      '-moz-border-radius': 'none',
+      '-webkit-border-radius': 'none',
+      'border-radius': 'none',
+    });
+
+    // Sidebar work
+    $(".side .spacer:first").remove();
+  }
+
   // header work
   $("#sr-header-area .flat-list.sr-bar.hover:first").remove();
   $("#sr-header-area .separator:first").remove();
@@ -34,12 +52,12 @@ $(document).ready(function() {
   $(".side .spacer .sidebox .spacer").remove();
 
   var random_button = '<div class="spacer"><div class="sidebox"><div class="morelink"><a href="http://www.reddit.com/r/random">Random Reddit</a></div></div></div>';
-  $(random_button).insertAfter(".side .spacer:first");
+  $(random_button).insertAfter($(".side .spacer .sidebox.submit").parent());
 
   $(".side .spacer .morelink").css({
     '-moz-border-radius': '3px',
     '-webkit-border-radius': '3px',
-    'border-radius': '3px',
+    'border-radius': '3px'
   });
 
   $(".side .spacer .morelink:hover a").css({
@@ -75,12 +93,16 @@ $(document).ready(function() {
   // listing work
   $(".link .rank").remove();
 
+  $(".midcol").css({
+    'margin-left': '0px'
+  });
+
   $(".thumbnail").css({
     'margin': '0 10px 0 0'
   });
 
   $("#siteTable .link").css({
-    'margin-bottom': '18px'
+    'margin': '7px 0 18px 0'
   });
   $("#siteTable .link .title").css({
     'margin-bottom': '2px'
@@ -88,6 +110,7 @@ $(document).ready(function() {
   $("#siteTable .link .title a").css({
     'color': '#369'
   });
+  $("#siteTable .link .title a").attr("target", "_blank");
   $("#siteTable .link .tagline").css({
     'margin-bottom': '1px'
   });
