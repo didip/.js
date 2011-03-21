@@ -1,20 +1,42 @@
 $(document).ready(function() {
+  // header
+  $('#masthead-utility a[href="http://upload.youtube.com/my_videos_upload"]').remove();
+  $('#masthead-utility a.start').remove();
+  $("#completeTable").css({'z-index': '99999'});
+
+  // front page
+  $('#feed_all-content, #iyt-login-suggest-box, #feedmodule-REC, #feedmodule-TOP, #homepage-side-content').remove();
+  $('#homepage-side-content').remove();
+  $('a[href="/inbox#comments/1"]').remove();
+
+  $("#iyt-login-suggest-box").remove();
   $("#homepage-main-content").css('width', '100%').css('margin-right', '0px').css('font-size', '16px');
   $("#homepage-main-content .user-account").css('margin-right', '20px');
   $(".main-spacer-bottom").remove();
 
-  $("#completeTable").css({'z-index': '99999'});
+  // search header
+  $("#search-header .num-results").css('font-size', '.8em');
   $("#search-pva-content, .single-line-lego-list").remove();
   $("#results-main-content").css('width', '100%');
   $("#search-results .result-item").css({
     'font-size': '16px',
-    'line-height': '1.6',
+    'line-height': '1.4',
+    'padding': '2px 0 10px',
     'margin-bottom': '8px',
     'border-bottom': '1px solid #ccc'
   });
   $("#search-results .result-item .description").css('max-height', 'none');
   $(".metadata-separator").html('&nbsp;&nbsp');
+  $("#search-footer-box .yt-uix-pager button").css({
+    'font-size': '18px'
+  });
+  $("#search-footer-box .yt-uix-pager a").css({
+    'font-size': '40px',
+    'vertical-align': '-12px'
+  });
+  $("#search-footer-box .yt-alert").remove();
 
+  // video page
   $("#watch-description-extra-info, #watch-description-expand").remove();
 
   setTimeout(function() {
@@ -49,11 +71,4 @@ $(document).ready(function() {
   $("#watch-related-container span.title, #watch-related-container span.stat, #watch-related-container span.stat.alt, #watch-related-container span.stat.view-count").remove();
 
   $('#watch-sidebar, #watch-discussion, #watch-video-extra').remove();
-
-  $('#feed_all-content, #iyt-login-suggest-box, #feedmodule-REC, #feedmodule-TOP, #homepage-side-content').remove();
-  $('#homepage-side-content').remove();
-  $('a[href=/inbox#comments/1]').remove();
-  $('a[href=http://upload.youtube.com/my_videos_upload]').remove();
-  $('#masthead-search-term').css('height', '35px').css('font-size', '28px');
-
 });
