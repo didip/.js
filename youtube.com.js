@@ -36,7 +36,7 @@ $(document).ready(function() {
   $("#watch-related-container").css({
     'display': 'block',
     'width': '700px',
-    'margin': '5px auto'
+    'margin': '0px auto'
   });
 
   var watch_related_items = $("ul#watch-related li span.ux-thumb-wrap.contains_addto").parent();
