@@ -42,6 +42,8 @@ $(document).ready(function() {
   // Sidebar work
   $(".side .spacer:first").remove();
   $(".side .spacer:first").remove();
+  $(".side .spacer:first").remove();
+
   $(".side").css({
     'margin': '7px 5px 0 10px'
   });
