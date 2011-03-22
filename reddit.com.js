@@ -40,7 +40,6 @@ $(document).ready(function() {
   });
   $("#header-bottom-right .nohavemail").css({
     'margin-left': '4px',
-    'vertical-align': '-1px'
   });
   $("#header-bottom-right .separator").remove();
 
