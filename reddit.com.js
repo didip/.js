@@ -209,10 +209,10 @@ $(document).ready(function() {
   });
 
   var new_footer = '<ul>';
+  new_footer += '<li><a href="http://store.reddit.com/index.html">reddit store</a></li>';
   new_footer += '<li><a href="http://www.reddit.com/help/gold/">reddit gold</a></li>';
   new_footer += '<li><a href="http://www.reddit.com/promoted/">self serve ads</a></li>';
   new_footer += '<li><a href="http://www.reddit.com/ad_inq/">inquire ads</a></li>';
-  new_footer += '<li><a href="http://www.reddit.com/bookmarklets/">bookmarklets</a></li>';
   new_footer += '<li><a href="http://www.reddit.com/socialite/">socialite</a></li>';
   new_footer += '<li><a href="http://www.reddit.com/code/">reddit code</a></li>';
   new_footer += '<li><a href="http://www.reddit.com/password">recover password</a></li>';
