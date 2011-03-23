@@ -19,6 +19,11 @@ $(document).ready(function() {
     });
 
     $(".tabmenu").remove();
+    
+    if($("a.thumbnail").attr("href").match(/\.(?:gif|png|jpg|tif|bmp)$/i)) {
+      $("#siteTable .child").append("<img style='margin-top: 10px; max-width: 800px; height: auto' src='" + $("a.thumbnail").attr("href") + "'>");
+      $("a.thumbnail").remove();
+    }
   }
 
   // header work
