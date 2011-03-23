@@ -19,11 +19,25 @@ $(document).ready(function() {
     });
 
     $(".tabmenu").remove();
-    
+
+    // render real image
     if($("a.thumbnail").attr("href").match(/\.(?:gif|png|jpg|tif|bmp)$/i)) {
-      $("#siteTable .child").append("<img style='margin-top: 10px; max-width: 800px; height: auto' src='" + $("a.thumbnail").attr("href") + "'>");
+      var img_style = "margin-top: 10px; max-width: 765px; height: auto";
+      img_style += "-moz-box-shadow: 0 0 7px #999;-webkit-box-shadow: 0 0 7px #999; box-shadow: 0 0 7px #999"
+      $("#siteTable .child").append("<img style='" + img_style + "' src='" + $("a.thumbnail").attr("href") + "'>");
       $("a.thumbnail").remove();
     }
+
+    $(".comment").each(function() {
+      // delete negative comments
+      if(parseInt($(this).find(".score.unvoted").text()) <= 0) {
+        $(this).remove();
+      }
+      // delete deleted comments
+      if($(this).find(".tagline em").text().match(/deleted/i)) {
+        $(this).remove();
+      }
+    });
   }
 
   // header work
