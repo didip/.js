@@ -33,7 +33,8 @@ $(document).ready(function() {
   $("#header-bottom-right").css({
     'background': 'none',
     'border': 'none',
-    'margin-right': '5px'
+    'margin-right': '5px',
+    'padding': '0 1px 1px 0'
   });
   $("#header-bottom-right .pref-lang").css({'font-weight': 'normal'});
   $("#header-bottom-right .submit, #header-bottom-right .user, #header-bottom-right .user, #header-bottom-right .flat-list.hover, #header-bottom-right .logout").css({
