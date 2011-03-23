@@ -187,7 +187,7 @@ $(document).ready(function() {
   $(".link .rank").remove();
 
   $(".midcol").css({
-    'margin-left': '0px'
+    'margin': '0 5px'
   });
 
   $(".thumbnail").css({
