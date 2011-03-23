@@ -17,6 +17,8 @@ $(document).ready(function() {
       'border-left': '1px dotted #ddf',
       'margin-left': '7px'
     });
+
+    $(".tabmenu").remove();
   }
 
   // header work
