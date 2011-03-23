@@ -180,7 +180,7 @@ $(document).ready(function() {
   $(".usertext-edit").css('width', '600px');
   $("textarea[name=text]").css({
     'width': '600px',
-    'height': '300px',
+    'height': '220px',
     'border': '1px solid #aaa',
     '-moz-border-radius': '3px',
     '-webkit-border-radius': '3px',
