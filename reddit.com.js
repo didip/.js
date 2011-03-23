@@ -180,15 +180,17 @@ $(document).ready(function() {
 
   // textarea
   $(".usertext-edit").css('width', '600px');
-  $("textarea[name=text]").css({
-    'width': '600px',
-    'height': '220px',
-    'border': '1px solid #aaa',
+  $("textarea").css({
     '-moz-border-radius': '3px',
     '-webkit-border-radius': '3px',
     'border-radius': '3px'
   });
-  $(".usertext-edit button.save").addClass('morelink').css({
+  $("textarea[name=text]").css({
+    'width': '600px',
+    'height': '220px',
+    'border': '1px solid #aaa',
+  });
+  $(".usertext-edit button.save, button.btn").addClass('morelink').css({
     'color': '#336699',
     'padding': '0 8px 3px',
     'height': '32px',
@@ -202,6 +204,32 @@ $(document).ready(function() {
     'font-size': '35px',
     'margin': '10px'
   });
+
+  // submit page
+  if(document.location.href.match(/\/r\/\w+\/submit/i)) {
+    $("h1").css({
+      'border-top': 'none',
+      'font-size': '20px',
+      'margin': '8px 0 3px',
+      'padding-bottom': '3px',
+      'border-bottom': '1px dotted #ccc'
+    });
+    $(".content").css({
+      'padding-left': '10px'
+    });
+    $("#newlink").css({
+      'margin': '0',
+      'padding-left': '0'
+    });
+    $(".formtabs-content").css({
+      'border-top': 'none'
+    });
+    $("#link-desc, .roundfield, input[name=url], input[name=sr]").css({
+      '-moz-border-radius': '3px',
+      '-webkit-border-radius': '3px',
+      'border-radius': '3px'
+    });
+  }
 
   // footer work
   $(".footer-parent").css({
