@@ -18,6 +18,6 @@ $(document).ready(function() {
   setInterval(function() {
     $(".uiUfi").css('width', '100%');
     $(".commentContent, .messageBody").css('font-size', '14px').css('line-height', '1.6');
-  }, 5000);
+  }, 50000);
 
 });
