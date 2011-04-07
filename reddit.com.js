@@ -21,7 +21,7 @@ $(document).ready(function() {
     $(".tabmenu").remove();
 
     var insert_real_image = function(href) {
-      var img_style = "margin-top: 10px; max-width: 765px; height: auto";
+      var img_style = "margin: 10px 0 0 10px; max-width: 765px; height: auto";
       img_style += "-moz-box-shadow: 0 0 7px #999;-webkit-box-shadow: 0 0 7px #999; box-shadow: 0 0 7px #999"
       $("#siteTable .child").append("<img style='" + img_style + "' src='" + href + "'>");
     };
