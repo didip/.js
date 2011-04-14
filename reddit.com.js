@@ -209,7 +209,12 @@ $(document).ready(function() {
   $("#siteTable .link a.thumbnail").each(function() {
     var parent = $(this).parent();
     $(parent).children(".child").append("<img src='" + $(this).attr("href") + "'/>");
-    $(parent).children(".child").css("margin", "10px 0 0 10px");
+    $(parent).children(".child").css({
+      'margin': '10px 0 0 10px'
+    });
+    $(parent).find(".child img").css({
+      'max-width': '765px'
+    });
     $(this).remove();
   });
 
